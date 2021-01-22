@@ -1,0 +1,13 @@
+stages:
+- deployment
+
+pages:
+  stage: deployment
+  before_script:
+  - echo "nop"
+  script:
+  - cp hello.html public
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - public
